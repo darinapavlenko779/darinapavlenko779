@@ -1,0 +1,22 @@
+Почини исходники проекта PlinkoBeam (платформа: unity, тикет ANDROID-3777). Раунд 1 из 3.
+
+Проект: C:/AndroidWorkspace/projects/PlinkoBeam
+Правила генерации (обязательны): C:/AndroidWorkspace/CLAUDE-unity.md
+Что нашли гейты пайплайна и где он встал: C:/AndroidWorkspace/projects/PlinkoBeam/.autofix-findings.txt — прочитай целиком.
+Полный лог пайплайна: C:/AndroidWorkspace/projects/PlinkoBeam/.unity-pipeline.log
+
+ГЛАВНОЕ — жалоба человека, она важнее находок гейтов (он видел это на устройстве):
+[error] [2026-10-05T08:14:34Z - Unity] Assets/Scripts/KpgOpjGkxAeVflP2AqV4pw/_0x9063a020.cs(41,139): error CS1061: 'TweenerCore<float, float, FloatOptions>' does not contain a definition for 'SetDelay' and no accessible extension method 'SetDelay' accepting a first argument of type 'TweenerCore<float, float, FloatOptions>' could be found (are you missing a using directive or an assembly reference?) [warning] [2026-10-05T08:14:34Z - Unity] Assets/Scripts/tldo2VfF8wU8mA26vMSefw/edsazHp68UjiP8qoPaG
+Найди, КАКОЙ объект/код рисует то, на что жалуются, и почини причину. Скриншоты
+прошлой сборки: C:/AndroidWorkspace/projects/PlinkoBeam/prompts/screenshots (могут быть старше кода).
+
+Требования:
+  * Меняй ТОЛЬКО файлы проекта. Шаблонные файлы не трогай (правило §00). Чинить через
+    свои объекты/override (C.2, C.18), а не правкой базовых prefab шаблона.
+  * Правь причину, а не симптом. НЕ ослабляй и не обходи проверки, ничего не удаляй
+    ради прохождения гейта.
+  * ПЕРЕД ОКОНЧАНИЕМ сам прогони ВСЕ гейты пайплайна и добейся exit 0:
+        bash C:/AndroidWorkspace/scripts/lib/unity-gates.sh C:/AndroidWorkspace/projects/PlinkoBeam
+    Если гейт падает — чини и прогоняй снова. Гейт с пометкой soft допустим, HARD — нет.
+  * Сборку не запускай и пайплайн не трогай — пересборку и сверку скриншотов сделает автофикс.
+  * В конце ответа одной строкой: что именно изменил (файлы и суть).

@@ -1,0 +1,173 @@
+{
+  "style": "flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette",
+  "palette": ["#14162F", "#5132A8", "#2FC8CF", "#F6C84C", "#EF5D82", "#F4F2EC"],
+  "note": "One art style for the whole project, repeated word for word in every prompt (F.1c). Sprite backgrounds are cut by rembg, so no background colour is ever requested (F.1b). Every mechanical sprite is deliberately SYMMETRIC and its facing is stated, because direction in this game is expressed by transform.rotation, never by the pixels (C.8).",
+  "assets": [
+    {
+      "name": "bg_main",
+      "type": "bg",
+      "transparent": false,
+      "target": "Assets/Art/Textures/_BASE/Backgrounds/BG_main.png",
+      "prompt": "vertical 9:16 night lattice of glowing hexagonal nodes receding into depth, violet glow rising from below, a cyan core in the centre, calm low contrast across the lower third, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, deep indigo, no text, no UI"
+    },
+    {
+      "name": "bg_game",
+      "type": "bg",
+      "transparent": false,
+      "target": "Assets/Art/Textures/_BASE/Backgrounds/BG_game.png",
+      "prompt": "vertical 9:16 the same hexagonal night lattice but heavily dimmed and desaturated, almost flat deep indigo, nothing bright in the centre so an overlaid beam reads clearly, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text, no UI"
+    },
+    {
+      "name": "sprite_hex_empty",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_hex_empty.png",
+      "facing": "radially symmetric, no direction",
+      "prompt": "one single pointy-top hexagon tile, dark indigo face, thin violet rim, inert and unlit, perfectly symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_hex_mirror",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_hex_mirror.png",
+      "facing": "mirror bar VERTICAL, symmetric on both axes",
+      "prompt": "one single pointy-top hexagon tile with a polished mirror bar running straight up and down through its centre, cyan specular highlight on both faces of the bar, symmetric left to right and top to bottom, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_hex_blocker",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_hex_blocker.png",
+      "facing": "radially symmetric, no direction",
+      "prompt": "one single pointy-top hexagon tile with a light-eating matte black core and a crimson pink warning rim, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_node_checkpoint",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_node_checkpoint.png",
+      "facing": "radially symmetric, no direction",
+      "prompt": "one single small hollow ring node, violet rim, unlit dark centre, geometric and clean, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_node_checkpoint_lit",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_node_checkpoint_lit.png",
+      "facing": "radially symmetric, no direction",
+      "prompt": "one single small hollow ring node fully energised, bright cyan rim and a glowing white core, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_crystal",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crystal.png",
+      "facing": "apex UP, left-right symmetric",
+      "prompt": "one single faceted prism crystal standing upright with its point at the top, golden inner light, sharp geometric facets, symmetric left to right, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_emitter",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_emitter.png",
+      "facing": "radially symmetric, no direction",
+      "prompt": "one single hexagonal emitter core with a round aperture ring, cyan light pooling inside the aperture, radially symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_beam_link",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_beam_link.png",
+      "facing": "horizontal bar, symmetric on both axes",
+      "prompt": "one single horizontal bar of light stretching from the left edge to the right edge, white hot core fading to cyan at the top and bottom edges, even along its whole length, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_beam_spark",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_beam_spark.png",
+      "facing": "radially symmetric, no direction",
+      "prompt": "one single small round light spark, white hot core fading to cyan, soft radial falloff, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_board_glow",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_board_glow.png",
+      "facing": "symmetric, nine-slice plate",
+      "prompt": "one single soft rounded rectangular glow plate, violet fading to transparent, even unbroken edges suitable for stretching, nothing inside it, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_panel_glass",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_panel_glass.png",
+      "facing": "symmetric, nine-slice plate",
+      "prompt": "one single rounded rectangular glass panel, deep indigo tint, a thin violet border, a faint cyan gradient along the top edge, even corners suitable for stretching, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_star",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_star.png",
+      "facing": "point UP, left-right symmetric",
+      "prompt": "one single five pointed star with its point upwards, golden, flat with a thin brighter rim, symmetric left to right, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_node_locked",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_node_locked.png",
+      "facing": "left-right symmetric",
+      "prompt": "one single simple geometric padlock glyph, muted violet, unlit, symmetric left to right, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_rotate_ring",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_rotate_ring.png",
+      "facing": "radially symmetric, no direction",
+      "prompt": "one single hexagonal hint ring, dashed cyan outline, hollow centre with nothing at all inside it, radially symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_icon_close",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_icon_close.png",
+      "facing": "symmetric on both axes",
+      "prompt": "one single bold X cross glyph, cyan, thick even strokes, nothing else in the frame, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_icon_pause",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_icon_pause.png",
+      "facing": "symmetric on both axes",
+      "prompt": "one single pause glyph of two thick vertical bars side by side, cyan, nothing else in the frame, symmetric, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_icon_back",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_icon_back.png",
+      "facing": "side view, chevron points LEFT",
+      "prompt": "one single bold chevron glyph pointing to the LEFT, cyan, thick even strokes, nothing else in the frame, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_icon_tap",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_icon_tap.png",
+      "facing": "top-down, fingertip points UP",
+      "prompt": "one single stylised fingertip touch glyph with the fingertip pointing UP and two concentric ripple rings around it, cyan, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette, no text"
+    },
+    {
+      "name": "sprite_mark_prism",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_mark_prism.png",
+      "facing": "left-right symmetric",
+      "prompt": "one single abstract emblem: a hexagonal outline with a refracted ray of light bending through a prism inside it, cyan and violet, symmetric left to right, absolutely no letters, no words, no numbers, flat vector neon-tech game art, crisp geometric shapes, luminous cyan and violet edge glow, clean hard silhouette"
+    }
+  ]
+}

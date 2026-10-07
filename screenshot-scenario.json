@@ -1,0 +1,50 @@
+{
+  "note": "tapFrac is [x, y] normalised SCREEN coordinates with the origin TOP-LEFT. UI taps come from each control's own anchor inside DefaultPanel/Content, corrected for the template's AspecterSA AspectRatioFitter: it fits a 1242x2688 rect (0.46205) inside the 1080x2400 device (0.45), so the UI layer is letterboxed 31.3 px top and bottom and a UGUI anchor a maps to screen y = 0.986958 - a*0.973917. World taps need no correction - the orthographic camera owns the whole screen - so they are computed straight from the hex centres, taking the midpoint of the 16:9 and 19.5:9 solutions; the accept radius is 0.56 of a hex, roughly ten times the spread between those two. Steps 6 and 7 hit the two ANCHOR cells, which LatticeGenerator guarantees hold a mirror in every level it can produce, so the taps are meaningful whatever seed the device rolls. Each loader wait uses waitLoader because both scenes raise their own splash.",
+  "steps": [
+    {
+      "wait": 3.0,
+      "shot": "01_Splash"
+    },
+    {
+      "waitLoader": true,
+      "shot": "02_Menu"
+    },
+    {
+      "tapFrac": [0.5, 0.846],
+      "label": "HOW TO PLAY - opens the lesson sheet",
+      "wait": 1.6,
+      "shot": "03_HowToPlay"
+    },
+    {
+      "tapFrac": [0.5, 0.75],
+      "label": "TO THE MAP - closes the lesson and opens the sector map",
+      "wait": 1.4,
+      "shot": "04_NodeMap"
+    },
+    {
+      "tapFrac": [0.285, 0.378],
+      "label": "NODE 01 badge - selects the node and loads the game scene",
+      "waitLoader": true,
+      "wait": 2.0,
+      "shot": "05_Lattice"
+    },
+    {
+      "tapFrac": [0.454, 0.454],
+      "label": "anchor mirror at column 1 row 1 - turns it, spends a move, re-routes the beam",
+      "wait": 1.6,
+      "shot": "06_BeamRerouted"
+    },
+    {
+      "tapFrac": [0.638, 0.616],
+      "label": "anchor mirror at column 2 row 3 - turns it, the route changes again",
+      "wait": 1.6,
+      "shot": "07_RouteExtended"
+    },
+    {
+      "tapFrac": [0.892, 0.091],
+      "label": "PAUSE - raises the pause card",
+      "wait": 1.5,
+      "shot": "08_PausePop"
+    }
+  ]
+}
